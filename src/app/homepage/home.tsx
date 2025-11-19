@@ -26,7 +26,7 @@ export default function Home() {
 
           {/* Imagem */}
           <div className="flex justify-center">
-            <img src={pizza} className="max-w-lg w-full" />
+            <img src={pizza} className="max-w-2xl w-full" />
           </div>
         </section>
       </main>
