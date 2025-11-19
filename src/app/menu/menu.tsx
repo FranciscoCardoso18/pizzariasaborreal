@@ -17,7 +17,7 @@ const pizzas: Pizza[] = [
     description:
       "Clássica e irresistível! Massa artesanal, molho de tomate natural, mussarela e manjericão fresco.",
     price: 9800,
-    image: "../../assets/pizza6.jpg",
+    image: "/assets/pizza6.jpg",
   },
   {
     id: 2,
@@ -67,33 +67,34 @@ export default function Menu() {
         Cardápio
       </h1>
 
-      <div className="container mx-auto px-4 flex gap-6 overflow-x-auto pb-6">
+      <div className="flex gap-6 overflow-x-auto px-4 pb-6">
         {pizzas.map((p) => (
           <div
             key={p.id}
-            className="bg-white shadow-md rounded-xl w-72 flex-shrink-0"
+            className="bg-white shadow-md rounded-xl flex flex-col w-72 flex-shrink-0 min-h-[450px]"
           >
             <img
               src={p.image}
               className="w-full h-48 object-cover rounded-t-xl"
             />
 
-            <div className="p-4 flex flex-col">
-              <h2 className="text-xl font-semibold">{p.name}</h2>
-              <p className="text-gray-600 text-sm mt-2 flex-grow">
-                {p.description}
-              </p>
+            <div className="p-4 flex flex-col flex-1 justify-between">
+              <div>
+                <h2 className="text-xl font-semibold">{p.name}</h2>
+                <p className="text-gray-600 text-sm mt-2">{p.description}</p>
+              </div>
 
-              <p className="text-red-700 text-lg font-bold mt-3">
-                {p.price.toLocaleString()} Kz
-              </p>
-
-              <button
-                onClick={() => enviarWhatsapp(p.name, p.price)}
-                className="mt-4 bg-red-600 text-white py-2 rounded-lg"
-              >
-                Pedir Agora
-              </button>
+              <div>
+                <p className="text-red-700 text-lg font-bold mt-3">
+                  {p.price.toLocaleString()} Kz
+                </p>
+                <button
+                  onClick={() => enviarWhatsapp(p.name, p.price)}
+                  className="mt-2 bg-red-600 text-white py-2 rounded-lg w-full"
+                >
+                  Pedir Agora
+                </button>
+              </div>
             </div>
           </div>
         ))}
