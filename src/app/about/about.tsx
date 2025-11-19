@@ -15,7 +15,7 @@ export default function Sobre() {
             crocante, molho artesanal e recheios que despertam sorrisos. Aqui,
             não é só comer, é sentir cada mordida, celebrar sabores e criar
             memórias. No Sabor Real, cada fatia é feita com paixão, qualidade e
-            autenticidade — porque o verdadeiro sabor merece ser vivido.
+            autenticidade, porque o verdadeiro sabor merece ser vivido.
           </p>
         </div>
 
