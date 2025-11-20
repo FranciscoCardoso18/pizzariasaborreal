@@ -1,23 +1,32 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./app/homepage/home";
-import Menu from "./app/menu/menu";
-import About from "./app/about/about";
-import Gallery from "./app/gallery/gallery";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Home from "./app/homepage/home";
+import About from "./app/about/about";
+import Menu from "./app/menu/menu";
+import Gallery from "./app/gallery/gallery";
 
-function App() {
+export default function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<Gallery />} />
-      </Routes>
+
+      <div id="home">
+        <Home />
+      </div>
+
+      <div id="about">
+        <About />
+      </div>
+
+      <div id="menu">
+        <Menu />
+      </div>
+
+      <div id="gallery">
+        <Gallery />
+      </div>
+
       <Footer />
     </>
   );
 }
-export default App;
