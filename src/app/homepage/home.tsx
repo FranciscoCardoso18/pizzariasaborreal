@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
 import pizza from "../../../public/assets/pizza.png";
 
 export default function Home() {
+  const scrollToMenu = () => {
+    const menuSection = document.getElementById("menu");
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Conteúdo principal */}
@@ -17,11 +23,12 @@ export default function Home() {
               Sabor incrível em cada pedaço.
             </p>
 
-            <Link to="/menu">
-              <button className="mt-6 bg-red-600 text-white px-6 py-3 text-lg rounded-lg hover:bg-red-700 transition">
-                Ver Cardápio
-              </button>
-            </Link>
+            <button
+              onClick={scrollToMenu}
+              className="mt-6 bg-red-600 text-white px-6 py-3 text-lg rounded-lg hover:bg-red-700 transition"
+            >
+              Ver Cardápio
+            </button>
           </div>
 
           {/* Imagem */}
