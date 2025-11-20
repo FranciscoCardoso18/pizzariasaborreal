@@ -1,7 +1,4 @@
 "use client";
-
-import React from "react";
-
 interface Pizza {
   id: number;
   name: string;
