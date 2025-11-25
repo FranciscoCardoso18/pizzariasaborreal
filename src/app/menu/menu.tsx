@@ -1,4 +1,5 @@
 "use client";
+
 interface Pizza {
   id: number;
   name: string;
