@@ -6,8 +6,8 @@ const images = [
   "/assets/pizza3.jpg",
   "/assets/pizza4.jpg",
   "/assets/pizza5.jpg",
-  "/assets/interior-saborReal.png",
-  "/assets/Espaço-saborReal.png",
+  "/assets/interior.png",
+  "/assets/espaco.png",
 ];
 
 export default function Gallery() {
