@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Conteúdo principal */}
-      <main className="flex-1 flex items-center">
+      <main className="flex-1 flex items-center pt-[100px]">
         <section className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
           {/* Texto */}
           <div>
